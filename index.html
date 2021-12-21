@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Virtual Pet</title>
+        <link href="../Virtual Pet/index.css" rel="stylesheet">  
+    </head>
+    <body>
+        <div class="columns">
+            
+            <div class="col-left">
+                <div class="name-age">
+                    <p id="pet-name">Spike</p>
+                    <p id="age-el">age</p>
+                </div>
+                <p id="health-el">health (0-100)</p>
+                <progress id="health-bar" value="100" max="100"></progress>
+                <p id="hunger-el">hunger (0-100)</p>
+                <progress id="hunger-bar" value="0" max="100"></progress>
+                <p id="happiness-el">happiness (0-100)</p>
+                <progress id="happiness-bar" value="100" max="100"></progress>
+                <div class="buttons">
+                    <button id="settings">Settings</button>
+                </div>
+            </div>
+            
+            <div class="col-main">
+                <img src="../Virtual Pet/images/happy-spike.gif" alt="spike-standing" id="spike-gif">
+                <div class="buttons">
+                    <button id="clean-el">Clean</button>
+                    <button id="feed-el">Feed</button>
+                    <button id="play-el">Play</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="overlay">
+            <div id="modal">
+                
+                <form>
+                    <input type="text" id="nameField" placeholder="Pet's Name" required>
+                    <button onclick="getPetName()" type="button">Use It</button></input>
+                </form>
+                
+                <p>Game Speed</p>
+
+                <div class="radio">
+                    <input type="radio" id="speedX1" name="speed" checked>
+                    <label for="speedX1">X 1</label>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" id="speedX2" name="speed">
+                    <label for="speedX2">X 2</label>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" id="speedX3" name="speed">
+                    <label for="speedX2">X 3</label>
+                </div>
+
+                <button id="goBack" onclick="goBack(overlayEl)">Return to the Game</button>
+
+            </div>
+        </div>
+
+        <div id="game-over">
+            <div id="g-o-flex">
+                <h3>Game Over</h3>
+                <button id="new-game-btn">New Game</button>
+            </div>    
+        </div>
+
+        <div id="event-container"></div>
+
+       <script src="../Virtual Pet/index.js"></script>
+    </body>
+</html>
