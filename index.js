@@ -97,9 +97,9 @@ function petLife() {
         happinessCheck();
 
         if (hunger > 50 || happiness < 50) {
-            spikeGif.src = "../Virtual Pet/images/hungry-spike.gif";
+            spikeGif.src = "./images/hungry-spike.gif";
         } else {
-            spikeGif.src = "../Virtual Pet/images/happy-spike.gif";
+            spikeGif.src = "./images/happy-spike.gif";
         }
 
         healthCheck();
@@ -174,7 +174,7 @@ function healthCheck() {
     } else if (health <= 0) {
         ageEl.textContent = `Spike is dead`;
         gameOverEl.style.display = "block";
-        spikeGif.src = "../Virtual Pet/images/dead-spike.gif";
+        spikeGif.src = "./images/dead-spike.gif";
         clearInterval(interval);
     }
     console.log("health", health);
@@ -230,7 +230,7 @@ function newGame() {
 
 
 
-    spikeGif.src = "../Virtual Pet/images/happy-spike.gif";
+    spikeGif.src = "./images/happy-spike.gif";
 }
 
 
@@ -270,7 +270,6 @@ function eventFetch() {
     }
     if (health <= 0 || healthBar.value <= 0) {
         clearTimeout(eventTimeOut);
-        console.log("ciao");
     }
 }
 
