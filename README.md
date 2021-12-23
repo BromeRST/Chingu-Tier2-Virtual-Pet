@@ -11,8 +11,7 @@ Chingu_Virtual_Pet is a web based tamagotchi inspired virtual pet.
 ## Getting started
 
 1. Clone the repository or download it directly from this page
-2. Change the folder's name in Virtual_Pet
-3. Open the index.html file and play
+2. Open the index.html file and play
 
 ## Features
 
